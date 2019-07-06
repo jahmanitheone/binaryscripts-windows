@@ -1,0 +1,19 @@
+SET JAVA_HOME=C:\dev-trythings\softwares\IBM-JDK161
+SET MAVEN_HOME=C:\dev-trythings\softwares\apache-maven-3.0.4
+SET M2_HOME=C:\dev-trythings\softwares\apache-maven-3.0.4
+SET HCENTIVE_VERSION=core-4.0.0
+SET HCENTIVE_CS_BUILD_PROFILE=tomcat
+SET HCENTIVE_HOME=C:\dev-trythings\CSCommonDev\HX_Stack
+SET HCENTIVE_EE_WAR_VERSION=2.5.17
+SET MVN_EXCEPTION_ARG= -e
+SET MVN_DEBUG_ARG=
+SET MAVEN_IGNORE_TEST=true
+SET TOMCAT_HOME=C:\dev-trythings\softwares\apache-tomcat-7.0.35
+SET CATALINA_HOME=%TOMCAT_HOME%
+SET EXTERNAL_JARS_PATH=Z:\rohit\Z_MY_Build\Support Files\JARS
+SET ITEXT_PATH=Z:\rohit\Z_MY_Build\Support Files\JARS
+
+echo JAVA_HOME=%JAVA_HOME%
+echo TOMCAT_HOMEE=%TOMCAT_HOME%
+echo HCENTIVE_HOME=%HCENTIVE_HOME%
+echo MAVEN_HOME=%MAVEN_HOME%

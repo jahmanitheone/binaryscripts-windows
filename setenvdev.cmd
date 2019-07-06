@@ -1,0 +1,3 @@
+call setjdk
+
+call settomcat

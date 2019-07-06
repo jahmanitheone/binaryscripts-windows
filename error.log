@@ -1,0 +1,32 @@
+6:58:56,557 ERROR [org.jboss.msc.service.fail] (ServerService Thread Pool -- 76) MSC000001: Failed to start service jboss.persistenceunit."jbpm-console.war#org.jbpm.domain": org.jboss.msc.service.StartException in service jb
+ss.persistenceunit."jbpm-console.war#org.jbpm.domain": javax.persistence.PersistenceException: [PersistenceUnit: org.jbpm.domain] Unable to build Hibernate SessionFactory
+       at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:172)
+       at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:117)
+       at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:667)
+       at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1.run(PersistenceUnitServiceImpl.java:182)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       at java.lang.Thread.run(Thread.java:748)
+       at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+aused by: javax.persistence.PersistenceException: [PersistenceUnit: org.jbpm.domain] Unable to build Hibernate SessionFactory
+       at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+       at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+       at org.jboss.as.jpa.hibernate5.TwoPhaseBootstrapImpl.build(TwoPhaseBootstrapImpl.java:44)
+       at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:154)
+       ... 7 more
+aused by: org.hibernate.exception.GenericJDBCException: Unable to obtain JDBC Connection
+       at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+       at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+       at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+       at org.hibernate.tool.schema.extract.internal.ExtractionContextImpl.getJdbcConnection(ExtractionContextImpl.java:65)
+       at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorH2DatabaseImpl.extractMetadata(SequenceInformationExtractorH2DatabaseImpl.java:35)
+       at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:64)
+       at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+       at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:123)
+       at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:101)
+       at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:470)
+       at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+       at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+       ... 9 more
+aused by: java.sql.SQLException: javax.resource.ResourceException: IJ000453: Unable to get managed connection for java:jboss/datasources/jbpmDS
+       at org.jboss.jca.adapters.jdbc.WrapperDataSource.getConnection(WrapperDataSource.java:146)
